@@ -1,3 +1,5 @@
+import random
+
 def maior(a, b):
     if a > b:
         return a
@@ -11,15 +13,15 @@ def soma(lista, x):
         somaParcial += x
     return somaParcial
 
-def media(lista):
-    somaParcial = soma(lista)
-    return somaParcial/len(lista)
+def media(lista1):
+    somaParcial = soma(lista1, None)
+    return somaParcial/len(lista1)
 
 def valores_iguais(lista1 , lista2):
     lista3 = []
     for i in range(len(lista1)):
         for j in range(len(lista2)):
-            if lista1[i] == lista2[j] && lista1[i] not in lista3:
+            if lista1[i] == lista2[j] and lista1[i] not in lista3:
                 lista3.append(lista1[i])
                 break
 
